@@ -80,12 +80,20 @@ export default function ReactTable() {
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
-            {rows.map((row) => {
+            {rows.map((row, index) => {
               prepareRow(row)
               return (
                 <tr {...row.getRowProps()} className="border-b border-gray-200">
                   {row.cells.map((cell) => {
-                    return (
+                    console.log(cell.column.Header)
+                    return cell.column.Header === 'First name' ? (
+                      <td
+                        {...cell.getCellProps()}
+                        className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    ) : (
                       <td
                         {...cell.getCellProps()}
                         className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-500"
