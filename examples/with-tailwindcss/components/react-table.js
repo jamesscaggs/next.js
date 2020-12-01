@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTable } from 'react-table'
+import { useTable, useFilters } from 'react-table'
 
 // import { data } from '../data'
 
@@ -48,7 +48,7 @@ export default function ReactTable() {
     []
   )
 
-  const tableInstance = useTable({ columns, data })
+  const tableInstance = useTable({ columns, data }, useFilters)
 
   const {
     getTableProps,
