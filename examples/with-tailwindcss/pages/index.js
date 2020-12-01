@@ -1,14 +1,19 @@
 import Nav from '../components/nav'
+import Sidebar from '../components/sidebar'
+import Table from '../components/Table'
+import ReactTable from '../components/react-table'
 
 export default function IndexPage() {
   return (
-    <div>
+    <>
       <Nav />
-      <div className="py-20">
-        <h1 className="text-5xl text-center text-gray-700 dark:text-gray-100">
-          Next.js + Tailwind CSS 2.0
-        </h1>
+      <div className="flex">
+        <Sidebar />
+        <div className="py-20 w-full container">
+          {/* <Table /> */}
+          <ReactTable />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
