@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 
 const links = [
@@ -5,7 +6,6 @@ const links = [
   { href: 'https://nextjs.org/docs', label: 'Docs' },
 ]
 
-import React from 'react'
 export default function Nav() {
   return (
     <nav className="w-full bg-white shadow">
@@ -90,10 +90,7 @@ export default function Nav() {
                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
               </svg>
             </div>
-            <div
-              className="flex items-center pl-8 relative cursor-pointer"
-              onclick="dropdownHandler(this)"
-            >
+            <div className="flex items-center pl-8 relative cursor-pointer">
               <ul className="p-2 w-40 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 hidden">
                 <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                   <div className="flex items-center">
@@ -165,10 +162,7 @@ export default function Nav() {
             </div>
           </div>
         </div>
-        <div
-          className="visible xl:hidden flex items-center relative"
-          onclick="dropdownHandler(this)"
-        >
+        <div className="visible xl:hidden flex items-center relative">
           <ul className="p-2 w-64 border-r bg-white absolute top-0 -ml-2 rounded right-0 shadow mt-12 lg:mt-16 hidden">
             <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
               <div className="flex items-center">

@@ -3,8 +3,8 @@ import { useTable, useFilters } from 'react-table'
 
 import ColumnFilter from './columnFilter'
 
-import { COLUMNS } from './columns'
-import { DATA } from './data'
+import { COLUMNS } from '../data/columns'
+import { DATA } from '../data/data'
 
 export default function ReactTable() {
   const columns = React.useMemo(() => COLUMNS, [])
